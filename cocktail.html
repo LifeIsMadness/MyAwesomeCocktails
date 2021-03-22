@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+    <header>
+        <nav id="top-nav">
+            <div id="top-nav-container" class="container">
+                <!-- Logo -->
+                <div id="top-nav-logo">
+                    <a href="./index.html">MyAwesomeCocktails</a>
+                </div>
+                <!-- There will be following links: home, my recipes -->
+                <div id="top-nav-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">My recipes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container flex-container">
+            <figure id="left-col">
+                    <figcaption style="font-size: 1.5em; margin-bottom: 0.5%">Mojito</figcaption>
+                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">
+            </figure>
+            <div id="right-col">
+                <section>
+                    <h2>Ingredients</h2>
+                    <ul style="padding-left: 4%; font-style: italic;">
+                        <li>2-3 oz Light rum</li>
+                        <li>Juice of 1 Lime</li>
+                        <li>2 tsp Sugar</li>
+                        <li>2-4 Mint</li>
+                        <li>Soda water</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Recipe</h2>
+                    <p style="font-weight: 400; color: #86939E; line-height: 24px; text-align: justify;">
+                        Muddle mint leaves with sugar and lime juice.
+                        Add a splash of soda water and fill the glass with cracked ice.
+                        Pour the rum and top with soda water.
+                        Garnish and serve with straw.
+                    </p>
+                </section>
+                <section>
+                    <h2>Glass</h2>
+                    <p style="margin-top: 0;">Serve: Highball glass</p>
+                </section>
+            </div>
+<!--                <table id="recipe-table">-->
+<!--                    <tr style="width: 35%">-->
+<!--                        <th>-->
+<!--                            <h2>Mojito</h2>-->
+<!--                            <br>-->
+<!--                        </th>-->
+<!--                        <th>-->
+<!--                            <h2>Ingredients</h2>-->
+<!--                            <br>-->
+<!--                        </th>-->
+<!--                    </tr>-->
+<!--                    <tr style="width: 65%">-->
+<!--                        <td rowspan="5">-->
+<!--                            <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="">-->
+<!--                        </td>-->
+<!--                        <td>2-3 oz Light rum</td>-->
+<!--                    </tr>-->
+<!--                    <tr><td>Juice of 1 Lime</td></tr>-->
+<!--                    <tr><td>2 tsp Sugar</td></tr>-->
+<!--                    <tr><td>2-4 Mint</td></tr>-->
+<!--                    <tr><td>Soda water</td></tr>-->
+<!--                </table>-->
+        </div>
+    </main>
+    <footer>
+        <div id="bottom-info">
+            <p>© 2021 MyAwesomeCocktails</p>
+            <p>Luckstriker073@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let _main = document.querySelector('main');
+        let _body = document.querySelector('body');
+        let bodyHeight = window.getComputedStyle(_body).height.replace('px', '');
+        while (window.innerHeight - bodyHeight > 0) {
+            _main.appendChild(document.createElement('br'));
+            bodyHeight = window.getComputedStyle(_body).height.replace('px', '');
+        }
+
+    </script>
+</body>
+</html>
