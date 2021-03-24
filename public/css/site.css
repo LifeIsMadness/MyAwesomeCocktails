@@ -3,9 +3,6 @@
     src: url("../fonts/Roboto-Regular.ttf");
 }
 
-html {
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -129,6 +126,14 @@ footer {
     float: left;
 }
 
+#top-nav-menu {
+    float: right;
+}
+
+#top-nav-logo > a {
+    font-size: 1.5rem;
+}
+
 #top-nav-logo > a,
 #top-nav-menu a {
     color: wheat;
@@ -145,12 +150,8 @@ footer {
     color: #5ad900;
 }
 
-#top-nav-menu {
-    float: right;
-}
-
 #top-nav-menu > ul {
-    margin: 0;
+    margin: 5px 0 0;
     padding: 0;
     list-style: none;
 
