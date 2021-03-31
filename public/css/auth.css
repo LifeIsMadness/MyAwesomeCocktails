@@ -1,9 +1,9 @@
 * {box-sizing: border-box}
 
 /* Add padding to containers */
-.container {
-    padding: 16px;
-}
+/*.container {*/
+/*    padding: 16px;*/
+/*}*/
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -50,5 +50,6 @@ a {
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
     background-color: #f1f1f1;
+    padding: 10px;
     text-align: center;
 }

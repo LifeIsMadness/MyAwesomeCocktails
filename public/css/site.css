@@ -43,7 +43,7 @@ footer {
     margin-right: auto;
 }
 
-@media (max-width: 481px){
+@media (max-width: 479px){
     .cocktail-list-row a{
         padding: 0 10% 0 10%;
         width: 80%;
@@ -55,7 +55,7 @@ footer {
     }
 }
 
-@media (min-width: 480px) and (max-width: 768px){
+@media (min-width: 480px) and (max-width: 767px){
     .cocktail-list-row a{
         padding: 0 10% 0 10%;
         width: 80%;
@@ -67,7 +67,7 @@ footer {
     }
 }
 
-@media(min-width: 768px) and (max-width: 992px){
+@media(min-width: 768px) and (max-width: 991px){
     .container {
         width: 750px;
     }
@@ -88,7 +88,7 @@ footer {
     /*}*/
 }
 
-@media(min-width: 992px) and (max-width: 1200px){
+@media(min-width: 992px) and (max-width: 1199px){
     .container {
         width: 900px;
     }
