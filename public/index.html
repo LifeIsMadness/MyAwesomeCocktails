@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktails</title>
     <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @keyframes logo-rotate {
             from{
@@ -46,10 +47,9 @@
     <main>
         <!-- There can be sorting or searching  -->
         <div class="container" style="padding: 1%;">
-            <form style="margin: 0 auto; width: 60%;" onsubmit="preventDefault();" role="search">
-                <label for="search">Search for stuff</label>
-                <input id="search" type="search" placeholder="Search..." required />
-                <button type="submit">Go</button>
+            <form class="search-form" onsubmit="preventDefault();" role="search">
+                <input id="search-input" type="text" placeholder="Search.." name="search">
+                <button type="button"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <!-- Cocktail list -->

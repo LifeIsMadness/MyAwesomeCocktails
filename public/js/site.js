@@ -1,3 +1,4 @@
+const cocktails = Array.from(document.querySelectorAll('.cocktail-list-row > a'));
 
 function setFooter() {
     let _main = document.querySelector('main');
@@ -11,10 +12,33 @@ function setFooter() {
     }
 }
 
-tId = setTimeout(setFooter, 500);
+var tId = setTimeout(setFooter, 500);
 
 window.addEventListener('resize',
     () => {
     clearTimeout(tId);
     tId = setTimeout(setFooter, 500);
 });
+
+document.querySelector('.search-form button')
+    .addEventListener('click', () => {
+        const regex = new RegExp('<figcaption>(.*)</figcaption>', 'i');
+        const text = document.getElementById('search-input').value;
+
+        let searched = cocktails.filter(c => {
+            name = regex.exec(c.innerHTML)[1];
+            return name.includes(text);
+        });
+
+        console.log(searched);
+
+        let container = document.querySelector('.cocktail-list-row');
+        container.innerHTML = '';
+
+        for (let el of searched) {
+            container.appendChild(el);
+        }
+
+        clearTimeout(tId);
+        tId = setTimeout(setFooter, 500);
+    });

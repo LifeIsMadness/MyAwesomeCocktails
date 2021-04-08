@@ -232,18 +232,6 @@ figcaption {
     width: 100%;
 }
 
-/* cocktail.html */
-
-/*#recipe-table {*/
-/*    width: 100%;*/
-/*    margin: 10px 0 10px;*/
-/*}*/
-
-/*#recipe-table img {*/
-/*    width: 50%;*/
-/*    height: 50%;*/
-/*}*/
-
 .flex-container {
     display: flex;
 }
@@ -260,5 +248,52 @@ figcaption {
 #left-col img{
     border: 3px solid;
     width: 100%;
-
 }
+
+form.search-form * {
+    box-sizing: border-box;
+}
+
+form.search-form {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+form.search-form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#search-input {
+    /*width: 80%;*/
+    border-radius: 4px 0 0 4px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.search-form button[type="button"] {
+    /*cursor: pointer;*/
+    /*width: 20%;*/
+    border-radius: 0 4px 4px 0;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ddd;
+
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.search-form button[type="button"]:hover {
+    background: #ccc;
+}
+
+
+
