@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/site.css">
 </head>
 
-<body>
+<body onload="renderCocktail()">
     <header>
         <nav id="top-nav">
             <div id="top-nav-container" class="container">
@@ -29,59 +29,37 @@
         </nav>
     </header>
     <main>
-        <div class="container flex-container">
-            <figure id="left-col">
-                    <figcaption style="font-size: 1.5em; margin-bottom: 0.5%">Mojito</figcaption>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">
-            </figure>
-            <div id="right-col">
-                <section>
-                    <h2>Ingredients</h2>
-                    <ul style="padding-left: 4%; font-style: italic;">
-                        <li>2-3 oz Light rum</li>
-                        <li>Juice of 1 Lime</li>
-                        <li>2 tsp Sugar</li>
-                        <li>2-4 Mint</li>
-                        <li>Soda water</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Recipe</h2>
-                    <p style="font-weight: 400; color: #86939E; line-height: 24px; text-align: justify;">
-                        Muddle mint leaves with sugar and lime juice.
-                        Add a splash of soda water and fill the glass with cracked ice.
-                        Pour the rum and top with soda water.
-                        Garnish and serve with straw.
-                    </p>
-                </section>
-                <section>
-                    <h2>Glass</h2>
-                    <p style="margin-top: 0;">Serve: Highball glass</p>
-                </section>
-            </div>
-<!--                <table id="recipe-table">-->
-<!--                    <tr style="width: 35%">-->
-<!--                        <th>-->
-<!--                            <h2>Mojito</h2>-->
-<!--                            <br>-->
-<!--                        </th>-->
-<!--                        <th>-->
-<!--                            <h2>Ingredients</h2>-->
-<!--                            <br>-->
-<!--                        </th>-->
-<!--                    </tr>-->
-<!--                    <tr style="width: 65%">-->
-<!--                        <td rowspan="5">-->
-<!--                            <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="">-->
-<!--                        </td>-->
-<!--                        <td>2-3 oz Light rum</td>-->
-<!--                    </tr>-->
-<!--                    <tr><td>Juice of 1 Lime</td></tr>-->
-<!--                    <tr><td>2 tsp Sugar</td></tr>-->
-<!--                    <tr><td>2-4 Mint</td></tr>-->
-<!--                    <tr><td>Soda water</td></tr>-->
-<!--                </table>-->
-        </div>
+<!--        <div class="container flex-container">-->
+<!--            <figure id="left-col">-->
+<!--                    <figcaption style="font-size: 1.5em; margin-bottom: 0.5%">Mojito</figcaption>-->
+<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">-->
+<!--            </figure>-->
+<!--            <div id="right-col">-->
+<!--                <section>-->
+<!--                    <h2>Ingredients</h2>-->
+<!--                    <ul style="padding-left: 4%; font-style: italic;">-->
+<!--                        <li>2-3 oz Light rum</li>-->
+<!--                        <li>Juice of 1 Lime</li>-->
+<!--                        <li>2 tsp Sugar</li>-->
+<!--                        <li>2-4 Mint</li>-->
+<!--                        <li>Soda water</li>-->
+<!--                    </ul>-->
+<!--                </section>-->
+<!--                <section>-->
+<!--                    <h2>Recipe</h2>-->
+<!--                    <p style="font-weight: 400; color: #86939E; line-height: 24px; text-align: justify;">-->
+<!--                        Muddle mint leaves with sugar and lime juice.-->
+<!--                        Add a splash of soda water and fill the glass with cracked ice.-->
+<!--                        Pour the rum and top with soda water.-->
+<!--                        Garnish and serve with straw.-->
+<!--                    </p>-->
+<!--                </section>-->
+<!--                <section>-->
+<!--                    <h2>Glass</h2>-->
+<!--                    <p style="margin-top: 0;">Serve: Highball glass</p>-->
+<!--                </section>-->
+<!--            </div>-->
+<!--        </div>-->
     </main>
     <footer>
         <div id="bottom-info">
@@ -90,5 +68,35 @@
         </div>
     </footer>
     <script src="./js/site.js"></script>
+    <script  id="template" type="text/html">
+        <div class="container flex-container">
+            <figure id="left-col">
+                <figcaption style="font-size: 1.5em; margin-bottom: 0.5%">{{name}}</figcaption>
+                <img src="{{imgLink}}" alt="{{name}}">
+            </figure>
+            <div id="right-col">
+                <section>
+                    <h2>Ingredients</h2>
+                    <ul style="padding-left: 4%; font-style: italic;">
+                        {{#ingredients}}
+                        <li>{{.}}</li>
+                        {{/ingredients}}
+                    </ul>
+                </section>
+                <section>
+                    <h2>Recipe</h2>
+                    <p style="font-weight: 400; color: #86939E; line-height: 24px; text-align: justify;">
+                        {{recipe}}
+                    </p>
+                </section>
+                <section>
+                    <h2>Glass</h2>
+                    <p style="margin-top: 0;">{{serve}}</p>
+                </section>
+            </div>
+        </div>
+    </script>
+    <script src="./js/mustache.js"></script>
+    <script src="./js/cocktail.js"></script>
 </body>
 </html>
