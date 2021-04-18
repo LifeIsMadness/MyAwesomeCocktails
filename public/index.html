@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body onload="setFooter()">
+<body>
     <header>
         <nav id="top-nav">
             <div id="top-nav-container" class="container">
@@ -54,36 +54,24 @@
         </div>
         <!-- Cocktail list -->
         <div class="cocktail-list-row container clearfix">
-            <a href="./cocktail.html">
-                <figure>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">
-                    <figcaption>Mojito</figcaption>
-                </figure>
-            </a>
-            <a href="./cocktail.html">
-                <figure>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Old Fashioned">
-                    <figcaption>Old Fashioned</figcaption>
-                </figure>
-            </a>
-            <a href="./cocktail.html">
-                <figure>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg" alt="Long Island Tea">
-                    <figcaption>Long Island Tea</figcaption>
-                </figure>
-            </a>
-            <a href="./cocktail.html">
-                <figure>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg" alt="Long Island Tea">
-                    <figcaption>Long Island Tea</figcaption>
-                </figure>
-            </a>
-            <a href="./cocktail.html">
-                <figure>
-                    <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg" alt="Long Island Tea">
-                    <figcaption>Long Island Tea</figcaption>
-                </figure>
-            </a>
+<!--            <a href="./cocktail.html">-->
+<!--                <figure>-->
+<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">-->
+<!--                    <figcaption>Mojito</figcaption>-->
+<!--                </figure>-->
+<!--            </a>-->
+<!--            <a href="./cocktail.html">-->
+<!--                <figure>-->
+<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Old Fashioned">-->
+<!--                    <figcaption>Old Fashioned</figcaption>-->
+<!--                </figure>-->
+<!--            </a>-->
+<!--            <a href="./cocktail.html">-->
+<!--                <figure>-->
+<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg" alt="Long Island Tea">-->
+<!--                    <figcaption>Long Island Tea</figcaption>-->
+<!--                </figure>-->
+<!--            </a>-->
         </div>
     </main>
     <!-- Dev info -->
@@ -93,6 +81,17 @@
             <p>Luckstriker073@gmail.com</p>
         </div>
     </footer>
+    <script id="cocktail_template" type="text/html">
+        {{#cocktails}}
+        <a href="./cocktail.html">
+            <figure>
+                <img src="{{imgLink}}" alt="{{name}}">
+                <figcaption>{{name}}</figcaption>
+            </figure>
+        </a>
+        {{/cocktails}}
+    </script>
+    <script src="./js/mustache.js"></script>
     <script src="./js/site.js"></script>
     <script src="./js/index.js"></script>
 </body>
