@@ -250,6 +250,15 @@ figcaption {
     width: 100%;
 }
 
+#left-col button {
+    border-radius: 7px;
+    background-color: #bf975a;
+    width: 44%;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
 form.search-form * {
     box-sizing: border-box;
 }
@@ -293,6 +302,20 @@ form.search-form button[type="button"] {
 
 form.search-form button[type="button"]:hover {
     background: #ccc;
+}
+
+@keyframes logo-rotate {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#top-nav-logo {
+    animation: logo-rotate 6s linear infinite;
 }
 
 

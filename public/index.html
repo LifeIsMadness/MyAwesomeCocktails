@@ -6,21 +6,6 @@
     <title>Cocktails</title>
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @keyframes logo-rotate {
-            from{
-                transform: rotateY(0deg);
-            }
-
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-        
-        #top-nav-logo {
-            animation: logo-rotate 6s linear infinite;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -36,8 +21,11 @@
                         <li class="active">
                             <a href="./index.html">Home</a>
                         </li>
-                        <li>
-                            <a href="./register.html">My recipes</a>
+                        <li id="favorites-link">
+                            <a href="./register.html">My cocktails</a>
+                        </li>
+                        <li id="logout-link" style="display: none">
+                            <a href="#" onclick="logout()">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -54,24 +42,6 @@
         </div>
         <!-- Cocktail list -->
         <div class="cocktail-list-row container clearfix">
-<!--            <a href="./cocktail.html">-->
-<!--                <figure>-->
-<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito">-->
-<!--                    <figcaption>Mojito</figcaption>-->
-<!--                </figure>-->
-<!--            </a>-->
-<!--            <a href="./cocktail.html">-->
-<!--                <figure>-->
-<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Old Fashioned">-->
-<!--                    <figcaption>Old Fashioned</figcaption>-->
-<!--                </figure>-->
-<!--            </a>-->
-<!--            <a href="./cocktail.html">-->
-<!--                <figure>-->
-<!--                    <img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg" alt="Long Island Tea">-->
-<!--                    <figcaption>Long Island Tea</figcaption>-->
-<!--                </figure>-->
-<!--            </a>-->
         </div>
     </main>
     <!-- Dev info -->
